@@ -5,7 +5,9 @@ function App() {
   return (
     <>
       <header>
-        <nav></nav>
+        <nav>
+          <li></li>
+        </nav>
       </header>
       <main></main>
       <footer></footer>
