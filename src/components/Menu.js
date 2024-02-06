@@ -6,36 +6,29 @@ const Menu = () => {
     const handleOrder = (id) =>{
         // console.log(id);
 
-        const swalWithBootstrapButtons = Swal.mixin({
-            customClass: {
-              confirmButton: 'btn btn-success',
-              cancelButton: 'btn btn-danger'
-            },
-            buttonsStyling: false
-          })
-
-          swalWithBootstrapButtons.fire({
-            title: 'Do you want to confirm order?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: false,
-            cancelButtonColor: '#dd3',
-            confirmButtonText: 'Yes, order it!',
-            reverseButtons: true
-          }).then((result) => {
-            if (result.isConfirmed) {
-              swalWithBootstrapButtons.fire(
-                'Orderd!',
-                'Your order has been confirmed.',
-                'success'
-              )
-            }
-          })
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, order it!"
+      }).then((result) => {
+          if (result.isConfirmed) {
+              Swal.fire({
+                  title: "Ordered!",
+                  text: "Your order has been processed.",
+                  icon: "success"
+              });
+          }
+      });
     }
     return (
         <div className="menu-container">
             <div className="menu-header">
-                <h2>Little Lemon Specials</h2>
+                <h2>This Weeks Specials</h2>
+                <a className='orderbtn'>Menu</a>
             </div>
 
             <div className="cards">
@@ -48,7 +41,7 @@ const Menu = () => {
                                 <p>{recipe.price}</p>
                             </div>
                             <p>{recipe.description}</p>
-                            <button className="orderbtn" onClick={()=>handleOrder(recipe.id)}>Add to Cart</button>
+                            <div className="orderbtn" onClick={()=>handleOrder(recipe.id)}>Add to Cart</div>
                         </div>
                     </div>)
 

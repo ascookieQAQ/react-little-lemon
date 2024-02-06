@@ -41,11 +41,15 @@ const Nav = () => {
                     <a href="/booking">Reservation</a>
                 </li>
                 <li>
+                    <a href="/order">Order Online</a>
+                </li>
+                <li>
                     <a href="/login">Login</a>
                 </li>
             </ul>
         </nav>
     )
 };
+
 
 export default Nav;
