@@ -44,7 +44,7 @@ const Menu = () => {
                         <img src={recipe.image} alt=""/>
                         <div className="menu-content">
                             <div className="heading">
-                                <h5>{recipe.title}</h5>
+                                <h4>{recipe.title}</h4>
                                 <p>{recipe.price}</p>
                             </div>
                             <p>{recipe.description}</p>
