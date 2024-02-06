@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bannerImg from '../images/italian-cuisine-main.webp';
+import bannerImg from '../images/italian-cuisine-main.jpg';
 
 const Header = () => {
     return (

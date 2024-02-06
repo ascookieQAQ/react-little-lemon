@@ -1,11 +1,11 @@
 const recipes = [
     {
       id: 1,
-      title: "Greek salad",
-      price: 12.99,
-      image: "https://i.ibb.co/68c9bLv/greek-salad.jpg",
+      title: "Spaghetti and meatball",
+      price: 16.99,
+      image: "https://raw.githubusercontent.com/ascookieQAQ/react-little-lemon/main/src/images/spaghetti-and-meatballs.jpg",
       description:
-        "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style fota cheese, garnished with crunchy garlic and rosemary croutons",
+        "Spaghetti and Meatballs in homemade marinara sauce. These are amazing “WOW”-inducing MEATBALLS – so tasty and juicy and BIG!",
     },
     {
       id: 2,
